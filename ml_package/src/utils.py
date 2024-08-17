@@ -1,6 +1,9 @@
 import pandas as pd
 import yaml
 import os
+import joblib
+from sklearn.pipeline import Pipeline
+
 
 all_classes = ["DataReader", "ConfigReader"]
 
@@ -63,6 +66,15 @@ class ConfigReader:
         return self.configparams
 
 
+def load_pipeline(filepath:str) -> Pipeline:
+    try:
+        saved_pipeline = joblib.load(filepath)
+        print("Pipeline loaded succesfully!")
+    except FileNotFoundError as fe:
+        raise fe
+
+    return saved_pipeline
+
 if __name__ == "__main__":
     PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
@@ -73,3 +85,5 @@ if __name__ == "__main__":
     #  Check for DataReader
     df = DataReader(os.path.join(PATH, config_["data_path"]["train_data"]))
     print(df.get_df().columns)
+
+

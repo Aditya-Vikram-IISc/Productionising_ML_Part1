@@ -4,3 +4,4 @@ PyYAML==6.0.2
 scikit-learn==1.5.1
 setuptools==63.2.0
 wheel==0.44.0
+pytest==8.3.2

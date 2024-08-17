@@ -13,7 +13,7 @@ configs = ConfigReader(CONFIG_PATH).getConfigParams()
 PIPELINE_PATH = os.path.join(PATH,f'{configs["model_path"]["model_folderpath"]}/best_pipeline.pkl')
 DATA_PATH = os.path.join(PATH, configs["data_path"]["test_data"])
 
-def generate_predicitons(data_path:str, pipeline_path:str):
+def generate_predicitons(data_path:str, pipeline_path:str) -> list:
     # load the dataset
     df =DataReader(data_path).get_df()    
 
@@ -22,7 +22,7 @@ def generate_predicitons(data_path:str, pipeline_path:str):
     
     # get output
     op = model_pipeline.predict(df)
-    return op
+    return list(op)
 
 if __name__ == "__main__":
     op = generate_predicitons(DATA_PATH, PIPELINE_PATH)

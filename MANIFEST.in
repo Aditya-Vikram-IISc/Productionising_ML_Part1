@@ -1,0 +1,13 @@
+include README.md
+include LICENSE
+include VERSION
+include requirements.txt
+
+recursive-include ml_package *.py
+recursive-include tests *.py
+
+exclude *.log
+recursive-exclude * __pycache__
+recursive-exclude * .vscode
+recursive-exclude * pytest_cache
+recursive-exclude * *.py[co]

@@ -30,15 +30,13 @@ class Preprocessor(BaseEstimator, TransformerMixin):
             transformers=[('scaler', MinMaxScaler(), self.numerical_columns)],
             remainder= "passthrough"
         )
-
         # Define the full pipeline
         pipeline = Pipeline([
                     ("drop_features", DropFeatures(variables = self.features_to_drop)),
+                    ("numcol_imputer", NumericalImputer(variables = self.numerical_columns, mode = self.numerical_column_impute_strategy)),
                     ("catcol_imputer", CategoricalImputer(variables = self.categorical_column, mode = self.categorical_column_impute_strategy)),
                     ("catcol_encoder", CategoricalEncoder(variables = self.categorical_column, mode = self.categorical_column_encode_strategy)),
-                    ("numcol_imputer", NumericalImputer(variables = self.numerical_columns)),
-                    ("numcol_scaler", mixmax_Scaler)
-
+                    ("numcol_scaler", mixmax_Scaler),
         ])
 
         self.pipeline = pipeline

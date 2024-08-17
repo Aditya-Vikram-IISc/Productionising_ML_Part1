@@ -1,0 +1,6 @@
+numpy==2.0.1
+pandas==2.2.2
+PyYAML==6.0.2
+scikit-learn==1.5.1
+setuptools==63.2.0
+wheel==0.44.0

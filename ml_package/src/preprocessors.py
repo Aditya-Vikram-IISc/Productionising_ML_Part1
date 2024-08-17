@@ -93,7 +93,6 @@ class CategoricalImputer(BaseEstimator, TransformerMixin):
         return X
 
 
-
 class CategoricalEncoder(BaseEstimator, TransformerMixin):
 
     def __init__(self, variables: list|str = None, mode:str =None):

@@ -11,6 +11,8 @@ The project folder structure is as follows:
 <br/>
 * LICENCE : Licence as per your criteria i.e MIT, Apache etc
 <br/>
+* LICENCE : Licence as per your criteria i.e MIT, Apache etc
+<br/>
 * requirements.txt : Contains external packages required for our package to work successfuly
 <br/>
 * requirements_dev.txt : Contains all packages mentioned in requirements.txt plus pytest, setuptools, and wheel required to create the package. We will create our local working environment using requirements_dev.txt

@@ -34,6 +34,7 @@ The project folder structure is as follows:
 <br/>
 * Once this code is executed two new folders get created namely ***build*** and ***dist*** and the folder structure is as shows
 <br/>
+
 ![Project Output Structure](images/Image2.png)
 
 <br/>

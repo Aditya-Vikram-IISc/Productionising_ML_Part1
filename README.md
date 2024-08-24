@@ -39,9 +39,9 @@ The project folder structure is as follows:
 
 ![Project Output Structure](images/Image2.png)
 
-<br/>
+<br/><br/>
 * Now to install the package from the wheel file as follows.
 `pip install dist/ml_package-1.1.0-py3-none-any.whl`
-<br/>
+<br/><br/>
 * One can now simply import all functionalities as
 `from ml_package import train, ConfigReader etc.`

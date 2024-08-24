@@ -33,7 +33,8 @@ The project folder structure is as follows:
 `python setup.py sdist bdist_wheel`
 <br/>
 * Once this code is executed two new folders get created namely ***build*** and ***dist*** and the folder structure is as shows
-![Project Structure](images/Image2.png)
+<br/>
+![Project Output Structure](images/Image2.png)
 
 <br/>
 * Now to install the package from the wheel file as follows.

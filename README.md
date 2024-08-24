@@ -7,7 +7,6 @@ The project folder structure is as follows:
 ![Project Structure](images/Image1.png)
 
 
-
 * MANIFEST.in : Added especially if you want to include additional files (like README.md, LICENSE, VERSION, etc.) in your source distribution that are not automatically included by setuptools.
 <br/>
 * LICENCE : Licence as per your criteria i.e MIT, Apache etc
@@ -35,6 +34,7 @@ The project folder structure is as follows:
 <br/>
 * Once this code is executed two new folders get created namely ***build*** and ***dist*** and the folder structure is as shows
 ![Project Structure](images/Image2.png)
+
 <br/>
 * Now to install the package from the wheel file as follows.
 `pip install dist/ml_package-1.1.0-py3-none-any.whl`
